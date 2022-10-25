@@ -1,16 +1,16 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Footer from '../component/Footer/Footer';
 import Header from '../component/Header/Header';
+import LeftSidePage from '../component/Shared/LeftSidePage';
 
 const Main = () => {
     return (
         <div>
             <Header></Header>
+            <Outlet></Outlet>
 
-            <div class="grid grid-rows-3 grid-flow-col gap-4">
-                <div class="row-span-3 ...">Left side</div>
-                <div class="row-span-2 col-span-2 ...">  <Outlet></Outlet> </div>
-            </div>
+            <Footer></Footer>
           
         </div>
     );
