@@ -1,9 +1,10 @@
 import React from 'react';
 
-const LeftSidePageCategory = () => {
+const LeftSidePageCategory = ({course}) => {
+    console.log(course);
     return (
         <div>
-            <h1>Hellow Category</h1>
+            <h1>{course.header}</h1>
         </div>
     );
 };

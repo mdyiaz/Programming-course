@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = ({course}) => {
    
@@ -14,7 +15,7 @@ const Cart = ({course}) => {
                         <p>{course.courseBody}</p>
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline bg-fuchsia-600 text-white">{course.courseFee}</div> 
-                            <button className="btn btn-active btn-accent text-white">Course Details</button>
+                            <Link to={course._id} className="btn btn-active btn-accent text-white">Course Details</Link>
 
                         </div>
                     </div>

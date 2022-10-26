@@ -6,6 +6,7 @@ import Courses from './component/Courses/Courses';
 import FAQ from './component/FAQ/FAQ';
 import Blog from './component/Blog/Blog';
 import Register from './component/Register/Register';
+import CartDetails from './component/CartDetails/CartDetails';
 
 function App() {
 
@@ -33,6 +34,13 @@ function App() {
         {
           path:'/register',
           element:<Register></Register>
+        },
+        {
+          path:'/courses/:id',
+          element: <CartDetails></CartDetails>,
+          loader:async ({params}) => {
+            return fetch(`http://localhost:5000/courses/${params.id}`)
+          },
         }
       ]
     }

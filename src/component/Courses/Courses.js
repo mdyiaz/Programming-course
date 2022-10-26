@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart';
+import LeftSidePageCategory from '../LeftSidePageCategory/LeftSidePageCategory';
 import LeftSidePage from '../Shared/LeftSidePage';
 
 const Courses = () => {
@@ -12,7 +13,19 @@ const Courses = () => {
             
 
             <div className="grid grid-rows-3 grid-flow-col gap-4">
-                <div className="row-span-3 ..."><LeftSidePage></LeftSidePage></div>
+                <div className="row-span-3 ...">
+
+                
+                {
+                    courses.map(course => <LeftSidePage
+                    key={course._id}
+                    
+                    course = {course}>
+
+
+                    </LeftSidePage>)
+                }
+                </div>
                 <div className="row-span-2 col-span-2 ...">
                     
                         {
