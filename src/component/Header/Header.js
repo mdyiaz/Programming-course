@@ -6,9 +6,23 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
 
-  const {user,providerLogin} = useContext(AuthContext)
+  const {user,providerLogin, logOut} = useContext(AuthContext)
+
+
+
+
+  const handleLogOut = () =>{
+    logOut()
+    .then(() => {})
+    .catch(error =>console.error(error))
+  }
+
+
+
 
 const googleProvider = new GoogleAuthProvider()
+
+
 
   const handleGoogleSignIn = () =>{
     providerLogin(googleProvider)
@@ -36,7 +50,20 @@ const googleProvider = new GoogleAuthProvider()
         <li><Link to={'/blog'}>Blog</Link></li>
         <li><Link to={'/register'} onClick={handleGoogleSignIn}>Register</Link></li>
         <li><Link to={'/login'}>Login</Link></li>
-        <li>{user?.displayName}</li>
+        <li>
+          {
+            user?.uid ?
+            <>
+              <span>{user?.displayName}</span>
+              <button onClick={handleLogOut}>Log Out</button>
+            </>
+            :
+            <>
+              <Link to={'/login'}>Login</Link>
+              <Link to={'/register'}>Register</Link>
+            </>
+          }
+          </li>
 
 
 
