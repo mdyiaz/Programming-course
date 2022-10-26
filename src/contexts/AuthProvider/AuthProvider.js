@@ -45,7 +45,7 @@ const [user, setUser] = useState(null);
     }, [])
 
 
-    const authInfo = {user, providerLogin, logOut, createUser};
+    const authInfo = {user, providerLogin, logOut, createUser, signIn};
 
     return (
         <AuthContext.Provider value={authInfo}>
