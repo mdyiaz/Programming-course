@@ -1,7 +1,25 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+  const {user,providerLogin} = useContext(AuthContext)
+
+const googleProvider = new GoogleAuthProvider()
+
+  const handleGoogleSignIn = () =>{
+    providerLogin(googleProvider)
+    .then(result =>{
+      const user = result.user;
+      console.log(user);
+    })
+    .catch(error =>console.error(error))
+
+  }
+
     return (
         <div>
             <div className="navbar bg-lime-500 mb-5 px-3">
@@ -16,7 +34,12 @@ const Header = () => {
         <Link to={'/faq'}>FAQ</Link>
         </li>
         <li><Link to={'/blog'}>Blog</Link></li>
-        <li><Link to={'/register'}>Register</Link></li>
+        <li><Link to={'/register'} onClick={handleGoogleSignIn}>Register</Link></li>
+        <li><Link to={'/login'}>Login</Link></li>
+        <li>{user?.displayName}</li>
+
+
+
         <li><Link>Toggle</Link></li>
     </ul>
   </div>

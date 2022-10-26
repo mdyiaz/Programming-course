@@ -3,18 +3,12 @@ import { useRouteLoaderData } from 'react-router-dom';
 import SingleCartDetail from '../SingleCartDetail/SingleCartDetail';
 
 const CartDetails = () => {
-    const cartDetails = useRouteLoaderData();
-    console.log(cartDetails);
+    const cartDetail = useRouteLoaderData();
+    console.log(cartDetail);
     return (
         <div>
             
-            {
-                cartDetails.map(cartDetail => <SingleCartDetail
-                key={cartDetail._id}
-                cartDetail={cartDetail}>
-                    
-                </SingleCartDetail>)
-            }
+               <h2>length:{cartDetail.length}</h2>
 
         </div>
     );

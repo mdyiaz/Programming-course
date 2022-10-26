@@ -7,6 +7,7 @@ import FAQ from './component/FAQ/FAQ';
 import Blog from './component/Blog/Blog';
 import Register from './component/Register/Register';
 import CartDetails from './component/CartDetails/CartDetails';
+import Login from './component/Login/Login';
 
 function App() {
 
@@ -36,9 +37,13 @@ function App() {
           element:<Register></Register>
         },
         {
+          path:'/login',
+          element:<Login></Login>
+        },
+        {
           path:'/courses/:id',
           element: <CartDetails></CartDetails>,
-          loader:async ({params}) => {
+          loader:({params}) => {
             return fetch(`http://localhost:5000/courses/${params.id}`)
           },
         }

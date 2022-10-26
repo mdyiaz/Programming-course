@@ -15,7 +15,7 @@ const Cart = ({course}) => {
                         <p>{course.courseBody}</p>
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline bg-fuchsia-600 text-white">{course.courseFee}</div> 
-                            <Link to={course._id} className="btn btn-active btn-accent text-white">Course Details</Link>
+                            <Link to={`courses/${course._id}`} className="btn btn-active btn-accent text-white">Course Details</Link>
 
                         </div>
                     </div>
