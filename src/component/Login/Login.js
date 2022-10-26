@@ -5,8 +5,7 @@ const Login = () => {
         <div>
             <form className='	' action="">
 
-                    <p className='font-bold	'>Name:</p>
-                    <input type="text" placeholder="Type your name" className="input input-bordered input-primary w-full max-w-xs my-5" /> <br />
+                    
 
                     <p className='font-bold'>Email:</p>
                     <input type="email" placeholder="Type your email" className="input input-bordered input-primary w-full max-w-xs my-5" /> <br />
