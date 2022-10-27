@@ -1,14 +1,19 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-import logo from '../Header/logo.png'
+import logo from '../Header/logo.png';
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+
 
 
 const Header = () => {
 
   const {user,providerLogin, logOut} = useContext(AuthContext)
+
+  const [toggle, setToggle] = useState(false);
 
 
 
@@ -69,7 +74,13 @@ const googleProvider = new GoogleAuthProvider()
           }
           </li>
 
-          <input type="checkbox" className="toggle" checked />
+         <div onClick={() => setToggle(e => !e)}>
+
+            {
+              toggle? <BsFillSunFill></BsFillSunFill> : <BsFillMoonFill></BsFillMoonFill>
+            }
+            
+         </div>
     </ul>
   </div>
 </div>
