@@ -4,7 +4,6 @@ import SingleCartDetail from '../SingleCartDetail/SingleCartDetail';
 
 const CartDetails = () => {
     const cartDetail = useLoaderData();
-    console.log(cartDetail);
     return (
         <div>
             

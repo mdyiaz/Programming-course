@@ -8,6 +8,7 @@ import Blog from './component/Blog/Blog';
 import Register from './component/Register/Register';
 import CartDetails from './component/CartDetails/CartDetails';
 import Login from './component/Login/Login';
+import NotFound from './component/NotFound/NotFound';
 
 function App() {
 
@@ -55,6 +56,10 @@ function App() {
           },
         }
       ]
+    },
+    {
+      path:'*',
+      element:<NotFound></NotFound>
     }
 
   ])

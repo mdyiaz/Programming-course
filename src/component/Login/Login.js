@@ -1,7 +1,7 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
@@ -82,6 +82,9 @@ console.log(email,password);
                     <p className='text-red-500'>{error}</p>
 
             </form>
+
+            <p>Don't have an account? <small className='text-rose-600'><Link to="/register">Sign in here</Link></small></p>
+            
 
 
 
