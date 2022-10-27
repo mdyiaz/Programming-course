@@ -67,7 +67,7 @@ const googleProvider = new GoogleAuthProvider()
 
 
 
-        <li><Link>Toggle</Link></li>
+          <input type="checkbox" className="toggle" checked />
     </ul>
   </div>
 </div>

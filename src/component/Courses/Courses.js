@@ -26,7 +26,7 @@ const Courses = () => {
                     </LeftSidePage>)
                 }
                 </div>
-                <div className="row-span-2 col-span-2 ...">
+                <div className=" grid grid-cols-2 row-span-2 col-span-2 ...">
                     
                         {
                             courses.map(course => <Cart

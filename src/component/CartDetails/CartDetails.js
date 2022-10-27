@@ -8,7 +8,16 @@ const CartDetails = () => {
     return (
         <div>
             
-               <h1>hellow</h1>
+             <div className="card w-96 bg-base-100 shadow-xl mx-auto">
+                    <figure><img src={cartDetail.picture} alt="Shoes" /></figure>
+                    <div className="card-body">
+                        <h2 className="card-title">{cartDetail.header}</h2>
+                        <p>{cartDetail.courseBody}</p>
+                        <div className="card-actions justify-end">
+                        <button className="btn btn-primary">{cartDetail.courseFee}</button>
+                        </div>
+                    </div>
+            </div>
 
         </div>
     );

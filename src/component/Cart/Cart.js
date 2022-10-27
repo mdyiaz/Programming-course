@@ -5,7 +5,7 @@ const Cart = ({course}) => {
    
     return (
         <div>
-                <div className="card w-96 bg-base-100 shadow-xl ">
+                <div className=" 	 card w-96 bg-base-100 shadow-xl ">
                     <figure><img src={course.picture} alt="Programming Courses" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">
@@ -16,6 +16,8 @@ const Cart = ({course}) => {
                         <div className="card-actions justify-end">
                             <div className="badge badge-outline bg-fuchsia-600 text-white">{course.courseFee}</div> 
                             <Link to={`courses/${course._id}`} className="btn btn-active btn-accent text-white">Course Details</Link>
+
+                            <Link to={`courses/${course._id}`} className="btn btn-active btn-accent text-white">Get Premium Access</Link>
 
                         </div>
                     </div>

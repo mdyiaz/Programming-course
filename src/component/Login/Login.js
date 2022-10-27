@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
 
+    const [error, setError] = useState('');
+
     const {signIn} = useContext(AuthContext);
+
+    const navigate = useNavigate();
 
     const handleSubmit = event =>{
         event.preventDefault();
@@ -17,12 +22,18 @@ const Login = () => {
             const user = result.user;
             console.log(user);
             form.reset();
+            setError('');
+            navigate('/')
         })
 
-        .catch(error => console.error(error))
+        .catch(error => {
+            
+            console.error(error)
+            setError(error.message);
+        })
     }
     return (
-        <div>
+        <div className='mx-96'>
             <form onSubmit={handleSubmit}>
 
                     
@@ -35,6 +46,8 @@ const Login = () => {
                     <input type="password" placeholder="Type your password" className="input input-bordered input-primary w-full max-w-xs my-5 " /> <br />
 
                     <button className="btn btn-secondary" type='submit'>Log In</button>
+
+                    <p className='text-red-500'>{error}</p>
 
 
 
