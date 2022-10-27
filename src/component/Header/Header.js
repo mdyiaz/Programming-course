@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,6 +21,8 @@ const Header = () => {
 
 
 const googleProvider = new GoogleAuthProvider()
+
+
 
 
 
