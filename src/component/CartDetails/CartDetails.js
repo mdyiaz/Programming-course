@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import SingleCartDetail from '../SingleCartDetail/SingleCartDetail';
 import Pdf from "react-to-pdf";
 
@@ -22,6 +22,7 @@ const CartDetails = () => {
                         <div className="card-actions justify-end">
                         <button className="btn btn-primary">{cartDetail.courseFee}</button>
                         
+                        <Link to="/checkout" className="btn btn-active btn-accent text-white">Get Premium Access</Link>
                         
                         
                         </div>

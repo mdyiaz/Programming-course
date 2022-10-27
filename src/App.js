@@ -9,6 +9,8 @@ import Register from './component/Register/Register';
 import CartDetails from './component/CartDetails/CartDetails';
 import Login from './component/Login/Login';
 import NotFound from './component/NotFound/NotFound';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import CheckOut from './component/CheckOut/CheckOut';
 
 function App() {
 
@@ -48,6 +50,16 @@ function App() {
           path:'/login',
           element:<Login></Login>
         },
+
+        {
+          path: '/checkout',
+          element:<CheckOut></CheckOut>,
+          loader:async ({params}) => {
+            return fetch(`http://localhost:5000/courses/$`)
+          }
+        },
+
+       
         {
           path:'/courses/:id',
           element: <CartDetails></CartDetails>,

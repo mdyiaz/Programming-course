@@ -7,11 +7,14 @@ const PrivateRoute = ({children}) => {
 
     const {user} = useContext(AuthContext);
    
-    if(!user){
-        return <Navigate to="/login"></Navigate>
+    if(user && user?.uid){
+        return children
+
     }
 
-    return children;
+
+
+    return <Navigate to="/login"></Navigate>
 };
 
 export default PrivateRoute;

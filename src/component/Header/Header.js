@@ -15,6 +15,8 @@ const Header = () => {
 
   const [toggle, setToggle] = useState(false);
 
+  const [uname, setUname] = useState(false);
+
 
 
 
@@ -45,25 +47,31 @@ const googleProvider = new GoogleAuthProvider()
 
     return (
         <div>
-            <div className="navbar bg-lime-500 mb-5 px-3">
-  <div className="flex-1">
-    <Link to="/" className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</Link>
-    <img className='w-10' src={logo} />
-  </div>
-  <div className="flex-none">
-    <ul className="menu menu-horizontal p-0">
-        <li><Link to={'/courses'}>Courses</Link></li>
-        <li tabIndex={0}>
-        <Link to={'/faq'}>FAQ</Link>
-        </li>
-        <li><Link to={'/blog'}>Blog</Link></li>
-        {/* <li><Link to={'/register'} onClick={handleGoogleSignIn}>Register</Link></li> */}
-        {/* <li><Link to={'/login'}>Login</Link></li> */}
+            <div className="navbar bg-lime-500 mb-5 px-3 ">
+                <div className="flex-1">
+                  <Link to="/" className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</Link>
+                  <img className='w-10' src={logo} />
+                </div>
+                <div className="flex-none">
+                  <ul className="menu menu-horizontal p-0">
+                      <li><Link to={'/courses'}>Courses</Link></li>
+                      <li tabIndex={0}>
+                      <Link to={'/faq'}>FAQ</Link>
+                      </li>
+                      <li><Link to={'/blog'}>Blog</Link></li>
+                      {/* <li><Link to={'/register'} onClick={handleGoogleSignIn}>Register</Link></li> */}
+                      {/* <li><Link to={'/login'}>Login</Link></li> */}
         <li>
           {
-            user?.uid ?
+            user?
             <>
-              <span>{user?.displayName}</span>
+              
+              <img onClick={() => setUname(e => !e)} alt='' className='w-14 h-14' src={user?.photoURL} ></img>
+
+              <div className='absolute'>
+                  <h1>{user.displayName}</h1>
+              </div>
+
               <button onClick={handleLogOut}>Log Out</button>
             </>
             :
@@ -81,9 +89,9 @@ const googleProvider = new GoogleAuthProvider()
             }
             
          </div>
-    </ul>
-  </div>
-</div>
+            </ul>
+          </div>
+        </div>
         </div>
     );
 };
