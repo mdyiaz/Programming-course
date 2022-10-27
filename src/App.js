@@ -23,14 +23,14 @@ function App() {
         {
           path:'/',
           loader:async () => {
-            return fetch(`http://localhost:5000/courses`)
+            return fetch(`https://b610-lerning-platform-server-side-mdyiaz-mdyiaz.vercel.app/courses`)
           },
           element:<Courses></Courses>
         },
         {
           path:'/courses',
           loader:async () => {
-            return fetch(`http://localhost:5000/courses`)
+            return fetch(`https://b610-lerning-platform-server-side-mdyiaz-mdyiaz.vercel.app/courses`)
           },
           element:<Courses></Courses>
         },
@@ -55,7 +55,7 @@ function App() {
           path: '/checkout',
           element:<CheckOut></CheckOut>,
           loader:async ({params}) => {
-            return fetch(`http://localhost:5000/courses/$`)
+            return fetch(`https://b610-lerning-platform-server-side-mdyiaz-mdyiaz.vercel.app/courses/$`)
           }
         },
 
@@ -64,7 +64,7 @@ function App() {
           path:'/courses/:id',
           element: <CartDetails></CartDetails>,
           loader:({params}) => {
-            return fetch(`http://localhost:5000/courses/${params.id}`)
+            return fetch(`https://b610-lerning-platform-server-side-mdyiaz-mdyiaz.vercel.app/courses/${params.id}`)
           },
         }
       ]
