@@ -18,6 +18,13 @@ function App() {
       element:<Main></Main>,
       children:[
         {
+          path:'/',
+          loader:async () => {
+            return fetch(`http://localhost:5000/courses`)
+          },
+          element:<Courses></Courses>
+        },
+        {
           path:'/courses',
           loader:async () => {
             return fetch(`http://localhost:5000/courses`)

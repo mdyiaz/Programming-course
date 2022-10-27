@@ -38,7 +38,7 @@ const googleProvider = new GoogleAuthProvider()
         <div>
             <div className="navbar bg-lime-500 mb-5 px-3">
   <div className="flex-1">
-    <Link className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</Link>
+    <Link to="/" className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</Link>
     <img src="./Rose Gold Brush Glitter Feminine Boutique Circle Logo.png" />
   </div>
   <div className="flex-none">
@@ -48,8 +48,8 @@ const googleProvider = new GoogleAuthProvider()
         <Link to={'/faq'}>FAQ</Link>
         </li>
         <li><Link to={'/blog'}>Blog</Link></li>
-        <li><Link to={'/register'} onClick={handleGoogleSignIn}>Register</Link></li>
-        <li><Link to={'/login'}>Login</Link></li>
+        {/* <li><Link to={'/register'} onClick={handleGoogleSignIn}>Register</Link></li> */}
+        {/* <li><Link to={'/login'}>Login</Link></li> */}
         <li>
           {
             user?.uid ?
@@ -64,8 +64,6 @@ const googleProvider = new GoogleAuthProvider()
             </>
           }
           </li>
-
-
 
           <input type="checkbox" className="toggle" checked />
     </ul>
