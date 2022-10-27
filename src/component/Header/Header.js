@@ -3,6 +3,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import logo from '../Header/logo.png'
+
 
 const Header = () => {
 
@@ -41,7 +43,7 @@ const googleProvider = new GoogleAuthProvider()
             <div className="navbar bg-lime-500 mb-5 px-3">
   <div className="flex-1">
     <Link to="/" className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</Link>
-    <img src="./Rose Gold Brush Glitter Feminine Boutique Circle Logo.png" />
+    <img className='w-10' src={logo} />
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal p-0">
