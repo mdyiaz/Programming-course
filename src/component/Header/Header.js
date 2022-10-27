@@ -38,7 +38,7 @@ const googleProvider = new GoogleAuthProvider()
         <div>
             <div className="navbar bg-lime-500 mb-5 px-3">
   <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</a>
+    <Link className="btn btn-ghost normal-case text-xl">Programming <br></br> Tutorial</Link>
     <img src="./Rose Gold Brush Glitter Feminine Boutique Circle Logo.png" />
   </div>
   <div className="flex-none">
