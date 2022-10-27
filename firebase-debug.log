@@ -1,0 +1,127 @@
+[debug] [2022-10-27T16:43:58.795Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T16:43:58.800Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2022-10-27T16:43:58.801Z] CLI Version:   11.15.0
+[debug] [2022-10-27T16:43:58.801Z] Platform:      linux
+[debug] [2022-10-27T16:43:58.802Z] Node Version:  v18.8.0
+[debug] [2022-10-27T16:43:58.813Z] Time:          Thu Oct 27 2022 22:43:58 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-10-27T16:43:58.814Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-27T16:43:58.897Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-27T16:43:58.898Z] > authorizing via signed-in user (mdyiaz@gmail.com)
+[debug] [2022-10-27T16:43:58.898Z] [iam] checking project programming-course-65bbb for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-27T16:43:58.905Z] > refreshing access token with scopes: []
+[debug] [2022-10-27T16:43:58.907Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-27T16:43:58.907Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T16:44:04.838Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-27T16:44:04.839Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T16:44:04.855Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/programming-course-65bbb:testIamPermissions [none]
+[debug] [2022-10-27T16:44:04.855Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/programming-course-65bbb:testIamPermissions x-goog-quota-user=projects/programming-course-65bbb
+[debug] [2022-10-27T16:44:04.856Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/programming-course-65bbb:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-27T16:44:11.385Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/programming-course-65bbb:testIamPermissions 200
+[debug] [2022-10-27T16:44:11.385Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/programming-course-65bbb:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-27T16:44:11.386Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/programming-course-65bbb [none]
+[debug] [2022-10-27T16:44:12.186Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/programming-course-65bbb 200
+[debug] [2022-10-27T16:44:12.187Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/programming-course-65bbb {"projectId":"programming-course-65bbb","projectNumber":"693248965839","displayName":"programming-course","name":"projects/programming-course-65bbb","resources":{"hostingSite":"programming-course-65bbb"},"state":"ACTIVE","etag":"1_541efead-e29b-4d93-a647-4c80ac85b801"}
+[info] 
+[info] === Deploying to 'programming-course-65bbb'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-27T16:44:12.189Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions [none]
+[debug] [2022-10-27T16:44:12.189Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-27T16:44:13.867Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions 200
+[debug] [2022-10-27T16:44:13.868Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions {"name":"projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[programming-course-65bbb]: beginning deploy... 
+[info] i  hosting[programming-course-65bbb]: found 24 files in build 
+[debug] [2022-10-27T16:44:13.939Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-27T16:44:14.632Z] [hosting] hash cache [YnVpbGQ] stored for 24 files
+[debug] [2022-10-27T16:44:14.633Z] [hosting][hash queue][FINAL] {"max":631,"min":72,"avg":114.12499999999999,"active":0,"complete":24,"success":24,"errored":0,"retried":0,"total":24,"elapsed":676}
+[debug] [2022-10-27T16:44:14.633Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7:populateFiles [none]
+[debug] [2022-10-27T16:44:14.633Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7:populateFiles {"files":{"/asset-manifest.json":"302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/static/css/main.5d58c8e2.css.map":"9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004","/static/js/703.f3bb0474.chunk.js":"ade79acbeb9952c400791f34c6c170678e242d7ae1a324808cc3d68f1e7b18bd","/static/js/236.3a5c38e1.chunk.js.LICENSE.txt":"3ed32958a11e264e84921ee39c7d1417f72943eefa42afb676749bb0fcd1e989","/static/js/703.f3bb0474.chunk.js.LICENSE.txt":"4e779ba9c35f641e33769b8e99080d37dbf99db64ecab5ce82f0a5d205ce0386","/static/js/787.f9701f74.chunk.js":"f08def6bf3540aaa2fe877ce2d258284951c3fb734ca543d9bcb9d3c70d5e7fe","/static/js/main.87c97a84.js.LICENSE.txt":"1cd5d2d063cce692170a21d481a9ec7e3bef4c69735de707579eed77f2e7a87a","/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg":"7d3ee40656c5a13fa0b04821777c1ba40bd028faa5c0e7475f61021d03fd35d6","/static/js/787.f9701f74.chunk.js.map":"2439e61d36ca77bc21ed730a0291c3d54aa66d7dc1365dc95145348c35f3314b","/index.html":"8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b","/favicon.ico":"1517b3059453b59f3893089b86ae43b8bcc083e76304d82ab9d4ff9a4c683f58","/static/css/main.5d58c8e2.css":"ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631","/static/media/logo.772bbacb4c08256dfc27.png":"d353a366d33c20c22cb12409c03215b0bb0e29e642b9101631826069227e51e6","/static/js/703.f3bb0474.chunk.js.map":"15f22adf76591de254ab3de999da531e7a0825e9db7f3656ed722e27a99bbd89","/static/js/513.08c8aa7d.chunk.js":"7524fe68025927ccd9b8ec3a786cb5936f0b809e21835895fa035abe4ea7e981","/static/js/236.3a5c38e1.chunk.js":"c56c48aee844737b510fa2b3ef7761392a5ae575b803bc919e4154435a3fae5a","/static/js/513.08c8aa7d.chunk.js.map":"3032db69c66cf6e129b15eb6b2ab4cf919b44a22476de0b1212ac1f4d4f191ee","/static/js/main.87c97a84.js":"6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f","/static/js/236.3a5c38e1.chunk.js.map":"69449ef356ec7b69fb609d51df436811e520b24a710f388caf3a2d2d7191fee1","/static/js/main.87c97a84.js.map":"26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164"}}
+[debug] [2022-10-27T16:44:25.773Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7:populateFiles 200
+[debug] [2022-10-27T16:44:25.774Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7:populateFiles {"uploadRequiredHashes":["ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631","302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015","6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f","26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164","9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004","8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files"}
+[debug] [2022-10-27T16:44:25.780Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631 [none]
+[debug] [2022-10-27T16:44:25.780Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631 [stream]
+[debug] [2022-10-27T16:44:25.785Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015 [none]
+[debug] [2022-10-27T16:44:25.785Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015 [stream]
+[debug] [2022-10-27T16:44:25.788Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f [none]
+[debug] [2022-10-27T16:44:25.788Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f [stream]
+[debug] [2022-10-27T16:44:25.791Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164 [none]
+[debug] [2022-10-27T16:44:25.791Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164 [stream]
+[debug] [2022-10-27T16:44:25.795Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004 [none]
+[debug] [2022-10-27T16:44:25.795Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004 [stream]
+[debug] [2022-10-27T16:44:25.798Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b [none]
+[debug] [2022-10-27T16:44:25.798Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b [stream]
+[debug] [2022-10-27T16:44:25.801Z] [hosting][populate queue][FINAL] {"max":11163,"min":11163,"avg":11163,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":11185}
+[debug] [2022-10-27T16:44:25.801Z] [hosting] uploads queued: 6
+[debug] [2022-10-27T16:44:46.200Z] [uploadQueue] Retrying task ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631
+[debug] [2022-10-27T16:44:46.202Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631 [none]
+[debug] [2022-10-27T16:44:46.202Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631 [stream]
+[debug] [2022-10-27T16:44:46.206Z] [uploadQueue] Retrying task 302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015
+[debug] [2022-10-27T16:44:46.207Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015 [none]
+[debug] [2022-10-27T16:44:46.207Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015 [stream]
+[debug] [2022-10-27T16:44:56.180Z] [uploadQueue] Retrying task 6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f
+[debug] [2022-10-27T16:44:56.182Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f [none]
+[debug] [2022-10-27T16:44:56.182Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f [stream]
+[debug] [2022-10-27T16:44:56.186Z] [uploadQueue] Retrying task 9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004
+[debug] [2022-10-27T16:44:56.186Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004 [none]
+[debug] [2022-10-27T16:44:56.186Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004 [stream]
+[debug] [2022-10-27T16:44:56.187Z] [uploadQueue] Retrying task 8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b
+[debug] [2022-10-27T16:44:56.187Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b [none]
+[debug] [2022-10-27T16:44:56.187Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b [stream]
+[debug] [2022-10-27T16:45:06.214Z] [uploadQueue] Retrying task 26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164
+[debug] [2022-10-27T16:45:06.216Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164 [none]
+[debug] [2022-10-27T16:45:06.216Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164 [stream]
+[debug] [2022-10-27T16:45:13.110Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631 200
+[debug] [2022-10-27T16:45:13.110Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/ea2ed5881aa72b259ee899a0d11d7bb197de78a8301147080de066c05aff4631 [stream]
+[debug] [2022-10-27T16:45:13.300Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f 200
+[debug] [2022-10-27T16:45:13.301Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/6d892f93aaecc31eb47c0f849cc2c288fdc12292455d5a168fc9a56dad94a48f [stream]
+[debug] [2022-10-27T16:45:13.309Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015 200
+[debug] [2022-10-27T16:45:13.309Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/302c2121326d3b2269edbec4ba0cdda70f849632aaccf8d2bb0e00b768f87015 [stream]
+[debug] [2022-10-27T16:45:18.459Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164 200
+[debug] [2022-10-27T16:45:18.459Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/26bbf5cf64624d1c532e84384edfe299f75fc7bfd107c14200c26f2b5032c164 [stream]
+[debug] [2022-10-27T16:45:18.831Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004 200
+[debug] [2022-10-27T16:45:18.831Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/9b77885e147478ca8774228bc8869c7c14f9028336598cdc0b7df3e5f8ac2004 [stream]
+[debug] [2022-10-27T16:45:22.557Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b 200
+[debug] [2022-10-27T16:45:22.557Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7/files/8ddc3a1998079ef4ef95300215c2a093545008783a5c35eebf3f6c75516b419b [stream]
+[debug] [2022-10-27T16:45:22.557Z] [hosting][upload queue][FINAL] {"max":27103,"min":12244,"avg":22065.166666666668,"active":0,"complete":6,"success":6,"errored":0,"retried":6,"total":6,"elapsed":56783}
+[info] ✔  hosting[programming-course-65bbb]: file upload complete 
+[debug] [2022-10-27T16:45:22.565Z] [hosting] deploy completed after 68692ms
+[debug] [2022-10-27T16:45:22.568Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "programming-course-65bbb"
+    },
+    "version": "projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7"
+  }
+]
+[info] i  hosting[programming-course-65bbb]: finalizing version... 
+[debug] [2022-10-27T16:45:22.571Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7 updateMask=status%2Cconfig
+[debug] [2022-10-27T16:45:22.571Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7 {"status":"FINALIZED","config":{}}
+[debug] [2022-10-27T16:45:23.815Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7 200
+[debug] [2022-10-27T16:45:23.815Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7 {"name":"projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-27T16:45:19.913107Z","createUser":{"email":"mdyiaz@gmail.com"},"finalizeTime":"2022-10-27T16:46:30.451408Z","finalizeUser":{"email":"mdyiaz@gmail.com"}}
+[debug] [2022-10-27T16:45:23.816Z] [hosting] finalized version for programming-course-65bbb:[object Object]
+[info] ✔  hosting[programming-course-65bbb]: version finalized 
+[info] i  hosting[programming-course-65bbb]: releasing new version... 
+[debug] [2022-10-27T16:45:23.817Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/channels/live/releases versionName=projects%2F693248965839%2Fsites%2Fprogramming-course-65bbb%2Fversions%2Ff1b3cd2cd4cdaaf7
+[debug] [2022-10-27T16:45:23.817Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/channels/live/releases {}
+[debug] [2022-10-27T16:45:25.277Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/channels/live/releases 200
+[debug] [2022-10-27T16:45:25.278Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/programming-course-65bbb/channels/live/releases {"name":"projects/693248965839/sites/programming-course-65bbb/channels/live/releases/1666889191033069","version":{"name":"projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-27T16:45:19.913107Z","createUser":{"email":"mdyiaz@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0mYJa0gFb25Mbrq42xwYlc1hf9YwJ7TD8sdz1pFA"},"finalizeTime":"2022-10-27T16:46:30.451408Z","finalizeUser":{"email":"mdyiaz@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0mYJa0gFb25Mbrq42xwYlc1hf9YwJ7TD8sdz1pFA"}},"type":"DEPLOY","releaseTime":"2022-10-27T16:46:31.033069891Z","releaseUser":{"email":"mdyiaz@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0mYJa0gFb25Mbrq42xwYlc1hf9YwJ7TD8sdz1pFA"}}
+[debug] [2022-10-27T16:45:25.278Z] [hosting] release: {"name":"projects/693248965839/sites/programming-course-65bbb/channels/live/releases/1666889191033069","version":{"name":"projects/693248965839/sites/programming-course-65bbb/versions/f1b3cd2cd4cdaaf7","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-10-27T16:45:19.913107Z","createUser":{"email":"mdyiaz@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0mYJa0gFb25Mbrq42xwYlc1hf9YwJ7TD8sdz1pFA"},"finalizeTime":"2022-10-27T16:46:30.451408Z","finalizeUser":{"email":"mdyiaz@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0mYJa0gFb25Mbrq42xwYlc1hf9YwJ7TD8sdz1pFA"}},"type":"DEPLOY","releaseTime":"2022-10-27T16:46:31.033069891Z","releaseUser":{"email":"mdyiaz@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu0mYJa0gFb25Mbrq42xwYlc1hf9YwJ7TD8sdz1pFA"}}
+[info] ✔  hosting[programming-course-65bbb]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/programming-course-65bbb/overview
+[info] Hosting URL: https://programming-course-65bbb.web.app
+[debug] [2022-10-27T16:45:36.703Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
